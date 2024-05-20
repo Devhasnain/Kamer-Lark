@@ -4,7 +4,8 @@ import Container from "./Container";
 import Logo from "./Logo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import LoginModel from "./Auth/LoginModel";
+import { RiMenu3Line } from "@remixicon/react";
+import SmallScreenMenu from "./SmallScreenMenu";
 
 let Links = [
   {
@@ -31,11 +32,11 @@ const Navbar = () => {
   return (
     <div className="fixed w-full z-50 bg-black text-white">
       <Container>
-        <div className="grid grid-cols-12 items-center py-1.5">
-          <div className="col-span-2">
+        <div className="grid grid-cols-2 lg:grid-cols-12 items-center py-1.5">
+          <div className="lg:col-span-2">
             <Logo />
           </div>
-          <div className="col-span-7 flex flex-row items-center justify-center gap-12">
+          <div className="col-span-7 hidden lg:flex flex-row items-center justify-center gap-12">
             {Links?.map((item, index) => {
               return (
                 <Link
@@ -50,11 +51,17 @@ const Navbar = () => {
               );
             })}
           </div>
-          <div className="col-span-3 flex flex-row items-center justify-end gap-3">
+          <div className="col-span-3 hidden lg:flex flex-row items-center justify-end gap-3">
             <Link href={"/"} className="px-5 py-2 rounded bg-blue-500">
               Add Listings
             </Link>
-            <LoginModel />
+            <Link href={"/auth/signin"} className="px-5 py-2 rounded bg-blue-500">
+              Login
+            </Link>
+          </div>
+          <div className="flex flex-row justify-end lg:hidden">
+            {/* <RiMenu3Line color="white" size={32} /> */}
+            <SmallScreenMenu/>
           </div>
         </div>
       </Container>

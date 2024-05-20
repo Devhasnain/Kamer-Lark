@@ -30,7 +30,7 @@ const TermsAndConditions = () => {
               {index + 1}. {item}
             </p>
           ))}
-          <div className="flex flex-row justify-end pt-16">
+          <div className="flex flex-row justify-center sm:justify-end pt-16">
             <Image
               alt=""
               src={"/assets/signature.png"}

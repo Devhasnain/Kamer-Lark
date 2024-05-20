@@ -88,11 +88,11 @@ const Footer = () => {
     <>
       <div className="bg-black text-white py-14 _footer">
         <Container>
-          <div className="grid grid-cols-12 gap-2">
-            <div className="col-span-7">
+          <div className="grid grid-cols-12 gap-y-12 lg:gap-y-0 lg:gap-2">
+            <div className="col-span-12 md:col-span-8 lg:col-span-6 xl:col-span-7">
               <div className="flex flex-col gap-5">
                 <Logo />
-                <p className="lg:w-5/12">
+                <p className="w-full sm:w-10/12 md:w-8/12 lg:w-8/12 xl:w-5/12">
                   KamerLark is an international accommodation platform designed
                   for students and family who are going to abroad and worrying
                   about accommodation.
@@ -110,7 +110,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-span-2">
+            <div className="col-span-12 md:col-span-4 lg:col-span-3 xl:col-span-2">
               <div className="flex flex-col gap-3">
                 <h3 className="text-xl font-bold">Quick Links</h3>
                 <div className="rounded-md h-1 bg-blue-500 w-12" />
@@ -132,7 +132,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-span-3">
+            <div className="col-span-12 md:col-span-6 lg:col-span-3 xl:col-span-3">
               <div className="flex flex-col gap-3">
                 <h3 className="text-xl font-bold">Contact Us</h3>
                 <div className="rounded-md h-1 bg-blue-500 w-12" />
